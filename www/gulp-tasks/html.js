@@ -8,7 +8,7 @@ module.exports = function (gulp, plugins, task) {
     sourceRoot + '**/*.{html,ico}',
     '!' + sourceRoot + 'index.html'
   ];
-  let destinationPath = './../release/wwwroot/';
+  let destinationPath = './../server/src/CodeFactory/wwwroot/';
 
   return {
     default: function (callback) {

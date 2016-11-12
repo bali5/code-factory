@@ -3,7 +3,7 @@ module.exports = function (gulp, plugins, task) {
   let sourcePath = [
     sourceRoot + '**/*.html'
   ];
-  let destinationPath = './../release/wwwroot/views/';
+  let destinationPath = './../server/src/CodeFactory/wwwroot/views/';
 
   return {
     default: function (callback) {

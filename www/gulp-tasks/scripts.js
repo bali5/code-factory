@@ -11,8 +11,8 @@ module.exports = function (gulp, plugins, task) {
   ];
   var buildPath = './build/scripts/';
   var aotPath = './aot/';
-  var destinationPath = './../release/wwwroot/scripts/';
-  var destinationBuildPath = './../release/wwwroot/build/scripts/';
+  var destinationPath = './../server/src/CodeFactory/wwwroot/scripts/';
+  var destinationBuildPath = './../server/src/CodeFactory/wwwroot/build/scripts/';
 
   var libsSourceRoot = './node_modules/';
   var libsSourcePath = [

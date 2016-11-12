@@ -5,7 +5,7 @@ module.exports = function (gulp, plugins, task) {
     iconPath + 'material-icons.css',
     sourceRoot + '**/*.scss'
   ];
-  let destinationPath = './../release/wwwroot/styles/';
+  let destinationPath = './../server/src/CodeFactory/wwwroot/styles/';
 
   return {
     default: function (callback) {

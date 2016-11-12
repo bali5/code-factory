@@ -3,7 +3,7 @@ module.exports = function (gulp, plugins, task) {
   let sourcePath = [
     sourceRoot + '**/*.{png,jpg,svg}'
   ];
-  let destinationPath = './../release/wwwroot/images/';
+  let destinationPath = './../server/src/CodeFactory/wwwroot/images/';
 
   return {
     default: function (callback) {

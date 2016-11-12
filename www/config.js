@@ -43,8 +43,8 @@ System.config({
       "main": "hammer.js",
       "defaultExtension": "js"
     },
-    "typedjson": {
-      "main": "js/index.js",
+    "typedjson-npm": {
+      "main": "js/typed-json.js",
       "defaultExtension": "js"
     },
     "redux": {
@@ -137,7 +137,7 @@ System.config({
     "rxjs": "npm:rxjs",
     "systemjs-babel-build": "npm:systemjs-plugin-babel/systemjs-babel-browser.js",
     "traceur": "npm:traceur",
-    "typedjson-npm": "npm:typedjson-npm/js",
+    "typedjson-npm": "npm:typedjson-npm",
     "zone.js": "npm:zone.js",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
