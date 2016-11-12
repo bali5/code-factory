@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>code-factory</title>
+	<link rel="stylesheet" href="styles/styles.min.css" />
+</head>
+
+<body>
+	<cf-app>
+		<div class="loading">
+			<div><i class="material-icons loading-image"> cloud_queue </i></div>
+			<div class="loading-text">Loading...</div>
+		</div>
+	</cf-app>
+	<script>
+		window.onload = function () {
+			var script = document.createElement('script');
+			script.setAttribute('src','scripts/app.js');
+			document.head.appendChild(script);
+		};
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(MaterialIcons-Regular.woff2) format("woff2"), url(MaterialIcons-Regular.woff) format("woff"), url(MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+@import "../node_modules/@angular/material/core/theming/all-theme";
+@include md-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$primary: md-palette($md-grey, 800, 600, 200);
+$accent: md-palette($md-blue, 500, 700, 300);
+$warn: md-palette($md-red, 500, 300, 900); 
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: md-dark-theme($primary, $accent, $warn);
+
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($theme);
+
+/* -------------------------------------------
+   Global
+   ------------------------------------------- */
+* {
+  user-select: none;
+  cursor: default;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-fill, .fill, .fill-header, html, html body, .fill-5, .fill-10 {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.height-fill, .fill, .fill-header, html, html body, .fill-5, .fill-10 {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.fill-5 {
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+}
+
+.fill-10 {
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.fill-header {
+  top: 64px;
+}
+
+.description {
+  font-style: italic;
+  opacity: 0.5;
+  padding-right: 5px !important;
+}
+
+/* -------------------------------------------
+   Element
+   ------------------------------------------- */
+input, textarea {
+  color: #fafafa;
+}
+
+button {
+  cursor: pointer;
+}
+button > * {
+  vertical-align: middle;
+}
+button * {
+  cursor: pointer;
+}
+
+.resizer {
+  position: absolute;
+  background-color: #333333;
+  border-radius: 2px;
+}
+.resizer.resizer-vertical {
+  cursor: e-resize;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+}
+.resizer.resizer-horizontal {
+  cursor: n-resize;
+  left: 4px;
+  right: 4px;
+  height: 4px;
+}
+
+md-sidenav {
+  max-width: 90%;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+md-toolbar.header md-toolbar-row > * {
+  margin-right: 10px;
+}
+
+.hand {
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
+}
+
+/* -------------------------------------------
+   Hierarchy
+   ------------------------------------------- */
+html {
+  color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+html body {
+  background: #1e1e1e;
+}
+html body .loading, html body .error {
+  position: absolute;
+  left: calc(50% - 64px);
+  top: calc(50% - 64px);
+  width: 200px;
+  text-align: center;
+}
+html body .loading > *:first-child, html body .error > *:first-child {
+  padding-bottom: 10px;
+}
+html body .loading .loading-image, html body .error .loading-image {
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+html body .loading .error-image, html body .error .error-image {
+  -webkit-animation: error 2s linear infinite;
+          animation: error 2s linear infinite;
+}
+html body .loading .loading-image, html body .loading .error-image, html body .error .loading-image, html body .error .error-image {
+  position: absolute;
+  font-size: 64px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 136px;
+    opacity: 0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 136px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes error {
+  0% {
+    left: 0;
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 136px;
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes error {
+  0% {
+    left: 0;
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    left: 136px;
+    opacity: 0;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+html body .loading .loading-text, html body .loading .error-text, html body .error .loading-text, html body .error .error-text {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=styles.min.css.map */

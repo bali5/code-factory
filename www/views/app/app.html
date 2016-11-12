@@ -1,0 +1,22 @@
+<div [ngSwitch]="screen" class="fill">
+  <cf-login *ngSwitchCase="'login'" class="fill"></cf-login>
+  <cf-lobby-find *ngSwitchCase="'lobby-find'" class="fill"></cf-lobby-find>
+  <cf-lobby-create *ngSwitchCase="'lobby-create'" class="fill"></cf-lobby-create>
+  <div *ngSwitchCase="'connect'" class="fill">
+    <div class="fill">
+      <div class="loading">
+        <div><i class="material-icons loading-image"> cloud </i></div>
+        <div class="loading-text">Connecting to session...</div>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchDefault class="fill">
+    <div class="fill">
+      <div class="error">
+        <div><i class="material-icons error-image"> sentiment_very_dissatisfied </i></div>
+        <div class="error-text">The page is not found.</div>
+        <button md-button (click)="context.navigation.reload()">Reload page</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "D:\\Work\\Codemancer\\Projects\\code-factory\\www\\node_modules\\typedjson-npm\\package.json",
+    "raw": "npm:typedjson-npm",
+    "main": "js/typed-json.js",
+    "version": "0.1.6",
+    "global": false,
+    "name": "typedjson-npm"
+  }
+}
